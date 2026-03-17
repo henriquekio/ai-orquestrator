@@ -20,8 +20,8 @@ This folder contains the Codex adaptation of the orchestrator.
 
 ## Persona Index
 
-- [personas/maestro.md](/Users/henriquepereira/projects/ai-orquestrator/.codex/personas/maestro.md)
-- [personas/contextualizer.md](/Users/henriquepereira/projects/ai-orquestrator/.codex/personas/contextualizer.md)
-- [personas/staff-engineer.md](/Users/henriquepereira/projects/ai-orquestrator/.codex/personas/staff-engineer.md)
-- [personas/frontend-engineer.md](/Users/henriquepereira/projects/ai-orquestrator/.codex/personas/frontend-engineer.md)
-- [personas/frontend-reviewer.md](/Users/henriquepereira/projects/ai-orquestrator/.codex/personas/frontend-reviewer.md)
+- [personas/maestro.md](./personas/maestro.md)
+- [personas/contextualizer.md](./personas/contextualizer.md)
+- [personas/staff-engineer.md](./personas/staff-engineer.md)
+- [personas/frontend-engineer.md](./personas/frontend-engineer.md)
+- [personas/frontend-reviewer.md](./personas/frontend-reviewer.md)

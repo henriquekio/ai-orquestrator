@@ -1,0 +1,27 @@
+# create-skill
+
+## Purpose
+
+This skill defines how to create new skills in `.claude/skills` for this repository. Its purpose is to keep skill files compact, repository-specific, and consistent, so they can be used as operational instructions without introducing extra unsupported structure.
+
+## Procedure
+
+1. Identify the concrete problem the new skill is meant to solve in this repository.
+2. Choose a short and clear skill name that reflects the action the skill performs.
+3. Create the skill as a single `.md` file inside `.claude/skills`.
+4. Start the file with the skill name as the title.
+5. Add a `Purpose` section that explains what the skill is for and when it should be used.
+6. Add a `Procedure` section with step-by-step instructions describing exactly what the skill should do.
+7. Add a `Guard rails` section describing what the skill must preserve, avoid, or never assume.
+8. Keep the content specific to this repository and to the workflow the skill supports.
+9. Keep the skill concise and operational, avoiding generic filler or documentation that does not help execution.
+10. Verify the skill can be read as a direct instruction file without needing extra folders, templates, or metadata files.
+
+## Guard rails
+
+- Do not create folder-based skill structures inside `.claude/skills`.
+- Do not create `SKILL.md`, `README.md`, or auxiliary files for a `.claude` skill unless explicitly requested later.
+- Do not write vague or generic instructions that are not useful for this repository.
+- Do not omit `Purpose`, `Procedure`, or `Guard rails`.
+- Do not make the skill dependent on hidden assumptions that are not stated in the file.
+- Do not let the skill redefine repository conventions that already exist in `.claude`, `.cursor`, or `.codex`.
