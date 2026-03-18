@@ -1,0 +1,21 @@
+---
+description: This file describes the general coding rules for the project.
+---
+
+# Rules Overview
+
+These rules are meant to be applied across all code in the project, regardless of language or framework. They cover general best practices for writing clean, maintainable, and efficient code. Specific rules can be found in their respective files.
+
+The rules are separated to three categories: mandatory, recommended, and optional.
+
+### Mandatory
+
+The mandatory rules are the ones that must be followed in order to maintain a consistent codebase.
+
+### Recommended
+
+The recommended rules are the ones that are encouraged to be followed, but not strictly enforced.
+
+### Optional
+
+The optional rules are the ones that can be followed at the discretion of the developer, but are not required.

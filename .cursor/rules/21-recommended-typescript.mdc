@@ -1,0 +1,19 @@
+---
+description: This file describes the recommended coding rules for TypeScript projects.
+---
+
+# Recommended TypeScript Rules
+
+## Statement
+
+- External data from APIs, storage, environment variables, and user input should be validated or parsed at the boundary before it is used deeper in the application, if you don't know the contract, ask so.
+- Untrusted or uncertain values should be narrowed before they are treated as internal application types.
+- Raw external payloads should be avoided in broad internal flows when an explicit boundary step can make the data safer and clearer.
+- Boundary validation and parsing logic should stay close to the entry point where the data is introduced.
+- Explicit boundary handling should be preferred over assuming external data already matches internal types.
+
+## Rationale
+
+Validating and parsing external data at the boundary helps keep internal types more trustworthy and reduces the chance of unsafe assumptions spreading through the codebase. It also makes failures easier to identify because the place where uncertain data becomes trusted is clear and localized.
+
+Keeping boundary handling close to the source of the data improves maintainability and makes the intent of the code easier to understand. Prefering explicit validation over implicit assumptions helps TypeScript provide stronger guarantees in the parts of the application that depend on stable internal shapes.

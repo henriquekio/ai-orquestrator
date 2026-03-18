@@ -1,0 +1,20 @@
+---
+description: This file describes the React rules for the project.
+---
+
+# Mandatory React Rules
+
+## Statement
+
+- All React components MUST have typed props.
+- If a props type will be reused, it MUST be defined in a `types` file in the same directory. If it will not be reused, it MUST be defined in the component file.
+- Every component MUST be a function component.
+- It is prohibited to use `React.FC`.
+- State and effects MUST be used carefully. Unnecessary state, derived state, incorrect dependencies, and unscoped side effects are prohibited.
+- `useMemo` and `useCallback` MUST be used only when applicable, such as to protect expensive derived values or preserve referential stability when it matters. Unnecessary memoization is discouraged.
+
+## Rationale
+
+Using typed props and consistent function components makes React code easier to read, safer to change, and simpler to maintain. Keeping reusable types colocated and one-off types local helps preserve clarity without scattering definitions unnecessarily. Avoiding `React.FC` keeps component signatures explicit and prevents implicit behavior that is not needed.
+
+Being careful with state and effects improves render predictability and reduces bugs caused by stale values, redundant state, and side effects that run outside their intended scope. Using `useMemo` and `useCallback` only when they provide a clear benefit helps balance performance with readability and avoids adding accidental complexity to the component tree.
