@@ -5,6 +5,7 @@ description: This file describes the Git rules for the project.
 ## Statement
 
 - All commits MUST follow the Conventional Commits specification.
+- When applicable, use git cli.
 
 ## Rationale
 

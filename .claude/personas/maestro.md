@@ -35,6 +35,8 @@ Current specialist roster:
 12. Prefer `frontend-engineer` when the task requires frontend implementation, component work, UI behavior, accessibility, or client-side state execution within defined guardrails.
 13. Prefer `frontend-reviewer` when the task requires inspection of frontend work for correctness, missing states, accessibility, testing gaps, or adherence to the approved approach.
 14. If no specialist matches the work, say so explicitly and surface the gap instead of improvising expertise.
+15. After load the personas, execute the contextualizer, then sumarize what you did.
+16. The entire section will be managed by maestro.
 
 ## Handoff
 

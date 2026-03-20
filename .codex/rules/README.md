@@ -17,3 +17,9 @@ The recommended rules are the ones that are encouraged to be followed, but not s
 ### Optional
 
 The optional rules are the ones that can be followed at the discretion of the developer, but are not required.
+
+The rules definitions lives in:
+
+- [mandatory](./mandatory)
+- [recommended](./recommended)
+- [optional](./optional)

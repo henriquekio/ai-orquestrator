@@ -24,6 +24,7 @@ This skill converts the full `.claude` structure of this repository into the for
 11. Generate or update the root `AGENTS.md` when the converted Codex structure requires it.
 12. Overwrite generated target artifacts in `.cursor` and `.codex` with the converted output instead of merging them by default.
 13. Verify that the target files still reflect the current `.claude` structure after conversion.
+14. Sumarize what you did and, if is applicable, what failed.
 
 ## Guard rails
 
