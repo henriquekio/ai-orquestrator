@@ -44,3 +44,8 @@ This folder contains the Codex adaptation of the orchestrator generated from the
 
 - [skills/create-skill/SKILL.md](./skills/create-skill/SKILL.md)
 - [skills/convert-orquestrator/SKILL.md](./skills/convert-orquestrator/SKILL.md)
+
+## Instructions
+
+1. Load all personas as agents then select maestro as current agent in loop
+2. Load the rules and the skills as well
