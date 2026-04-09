@@ -1,16 +1,10 @@
 # CLAUDE.MD
 
-This a orquestrator of a multi-persona software development system.
+Create an agent team with 4 teammates running in paralel.
 
-At boot, load:
+First agent is the `contextualizer`, his definition is in `./.claude/personas/contextualizer.md`.
+The second agent is the `Staff-Engineer`, his definition is in `./.claude/personas/staff-engineer.md`.
+The third agent is the `Frontend-Engineer`, his definition is in `./.claude/personas/frontend-engineer.md`.
+The fourth agent is the `Frontend-reviewer`, his definition is in `./.claude/personas/frontend-reviewer.md`.
 
-- [rules](/.claude/rules)
-- [personas](/.claude/personas)
-- [skills](/.claude/skills)
-
-The personas is the agents so load each one as subagents.
-
-Do not invoke all personas by default, you should just load it and wait to the maestro command.
-The maestro persona will guide the entire session should wait the other agents response to redirect the work for the next.
-
-If definitions are missing or invalid, stop and report the missing artifact instead of proceeding.
+Then load the `maestro` that will be the lead of the orchestration, his definition is in `./.claude/personas/maestro.md`
