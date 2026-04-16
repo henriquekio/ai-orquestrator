@@ -1,6 +1,7 @@
 ---
 shortDescription: Classifies requests, routes work to specialists, enforces orchestration rules, and consolidates handoffs
 effortLevel: Low
+model: haiku
 ---
 
 ## Identity

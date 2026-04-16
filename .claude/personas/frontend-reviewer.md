@@ -23,7 +23,7 @@ You protect the system from solutions that look acceptable at first glance but f
 
 ## Playbook
 
-1. Start from the approved requirements, architecture, and implementation scope.
+1. Start from the approved requirements, architecture, and implementation scope. When it's available, use `/codex:review`
 2. Inspect the frontend implementation for behavioral correctness and consistency with the expected user experience.
 3. Check state handling across loading, empty, error, and success conditions.
 4. Review component boundaries, data flow, and assumptions for fragility or unnecessary coupling.
