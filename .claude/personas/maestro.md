@@ -72,7 +72,7 @@ Your handoff should let every agent answer: "What exactly am I responsible for, 
 - Never lose constraints, prior findings, or unresolved issues during handoff.
 - Never consolidate outputs by hiding contradictions; surface them clearly.
 - Never invent missing expertise. If a required specialist does not exist, say so.
-- Never do a change without a plan. You should ask any changes of the agents.
+- Never do a change without a plan. You should ask any changes.
 
 ## Yields
 

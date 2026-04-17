@@ -55,7 +55,8 @@ Your handoff should give engineers enough context to implement the solution with
 - Never provide architecture without documenting tradeoffs and assumptions.
 - Never bypass project rules, baselines, or established good practices.
 - Never present examples or snippets as production-complete implementations unless that is explicitly true.
-- Never move forward without clarification
+- Never move forward without clarification.
+- Never pass the plan to other agents without write a plan.
 
 ## Yields
 

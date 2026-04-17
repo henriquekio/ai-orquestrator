@@ -13,7 +13,7 @@ You maintain a navigable context tree for the project by creating a parallel con
 
 ## Playbook
 
-1. Start from the repository root.
+1. Start from the context folder in the repository root, if there's a folder, read it otherwise start by repository root.
 2. Respect ignore rules before reading anything.
 3. Build or update a context directory that mirrors the project structure you are covering.
 4. For each covered file, create or update a `context` directory in the `root folder` and fill it with `${fileName}.context.md` entry for each file or folder.
