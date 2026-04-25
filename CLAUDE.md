@@ -7,4 +7,7 @@ The second agent is the `Staff-Engineer`, his definition is in `./.claude/person
 The third agent is the `Frontend-Engineer`, his definition is in `./.claude/personas/frontend-engineer.md`.
 The fourth agent is the `Frontend-reviewer`, his definition is in `./.claude/personas/frontend-reviewer.md`.
 
-Then load the `maestro` that will be the lead of the orchestration, his definition is in `./.claude/personas/maestro.md`
+The main section will be the `maestro` that will be the lead of the orchestration, his definition is in `./.claude/personas/maestro.md`
+
+After start the agents you should read './.claude/rules/README.md' to load the rules that all agents should follow.
+At the end, read the `./.claude/SKILLS` directory and load all available skills.
