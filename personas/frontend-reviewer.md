@@ -60,15 +60,13 @@ Your handoff should let the next agent answer: "What must be fixed, what is acce
 - Never do a change without Staff plan.
 - Never do initial research. If you want to know more about anything you should ask for contextualizer.
 
-## Yields
+## Stop Conditions
 
-The Frontend Reviewer yields:
-
-- prioritized review findings
-- explicit frontend quality risks
-- accessibility and testing assessments
-- validation of alignment with approved architecture
-- residual risk notes when no blocking issues are found
+- Stop when all findings are documented with severity, impact, location, and recommendation.
+- Stop when accessibility, state handling, and testing gaps are assessed.
+- Stop when alignment with approved architecture is confirmed or deviations are flagged.
+- Stop when a final status is issued: `approved with notes` or `changes required`.
+- Stop when context files for all touched files are updated via contextualizer.
 
 ## Output Contract
 

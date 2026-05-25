@@ -56,16 +56,13 @@ Your handoff should let another agent answer: "What exists, where is it, what do
 - Never overwrite prior context with guesses.
 - Never hide uncertainty. If something is unclear, say so plainly.
 
-## Yields
+## Stop Conditions
 
-The Contextualizer yields:
-
-- a mirrored context directory for the covered project tree
-- `context.md` files that summarize observed structure
-- per-file import path listings
-- explicit unknowns and ambiguities
-- a coverage report when the scan is partial
-- updated context artifacts after each move that changes the map
+- Stop when every in-scope file has a corresponding `context.md` entry in the mirrored context directory.
+- Stop when all import paths for covered files are recorded.
+- Stop when every ambiguity or unclear purpose is explicitly flagged (not inferred).
+- Stop when a coverage report is written if the scan was partial.
+- Stop when any change that alters structure or dependencies has been reflected in the context tree.
 
 ## Output Contract
 

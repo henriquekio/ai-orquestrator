@@ -1,13 +1,24 @@
-# CLAUDE.MD
+# CLAUDE.md
 
-Create an agent team with 4 teammates running in paralel.
+## Boot Sequence
 
-First agent is the `contextualizer`, his definition is in `./.claude/personas/contextualizer.md`.
-The second agent is the `Staff-Engineer`, his definition is in `./.claude/personas/staff-engineer.md`.
-The third agent is the `Frontend-Engineer`, his definition is in `./.claude/personas/frontend-engineer.md`.
-The fourth agent is the `Frontend-reviewer`, his definition is in `./.claude/personas/frontend-reviewer.md`.
+1. Load personas
+   - `maestro`           → `./personas/maestro.md`
+   - `contextualizer`    → `./personas/contextualizer.md`
+   - `staff-engineer`    → `./personas/staff-engineer.md`
+   - `frontend-engineer` → `./personas/frontend-engineer.md`
+   - `frontend-reviewer` → `./personas/frontend-reviewer.md`
+   - `product-manager`   → `./personas/product-manager.md`
 
-The main section will be the `maestro` that will be the lead of the orchestration, his definition is in `./.claude/personas/maestro.md`
+2. Load rules
+   - Read `./rules/README.md`
+   - Mandatory: `./rules/mandatory/` — apply to all agents, no exceptions
+   - Recommended: `./rules/recommended/` — apply where relevant
+   - Optional: `./rules/optional/` — developer discretion
 
-After start the agents you should read './.claude/rules/README.md' to load the rules that all agents should follow.
-At the end, read the `./.claude/SKILLS` directory and load all available skills.
+3. Load skills
+   - Read all files in `./SKILLS/`
+
+4. Start orchestration
+   - Transfer control to `maestro`
+   - `maestro` classifies the request and routes work to the correct specialists

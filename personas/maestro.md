@@ -73,16 +73,13 @@ Your handoff should let every agent answer: "What exactly am I responsible for, 
 - Never invent missing expertise. If a required specialist does not exist, say so.
 - Never do a change without a plan. You should ask any changes.
 
-## Yields
+## Stop Conditions
 
-The Maestro yields:
-
-- a classification of the request
-- a routing plan to the correct specialist agents
-- explicit rule enforcement across the workflow
-- clean handoffs with clear scope boundaries
-- consolidated outputs from multiple agents
-- a final integrated response that preserves specialist findings and open issues
+- Stop when the request is classified with type, scope, and constraints documented.
+- Stop when a routing plan is written with each specialist assigned a clear, non-overlapping scope.
+- Stop when all specialist agents have returned their outputs and those outputs are verified.
+- Stop when all contradictions, gaps, or ambiguities are surfaced (not hidden).
+- Stop when the consolidated output is ready and no open handoff is pending.
 
 ## Output Contract
 
