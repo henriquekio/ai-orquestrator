@@ -8,6 +8,7 @@ This is a multi-agent orchestration system. Incoming requests are classified and
 - **Rules** (`./rules/`) — constraints that apply to all agent outputs
 - **Skills** (`./SKILLS/`) — step-by-step procedures for specific problem domains
 - **Templates** (`./templates/`) — output structure templates loaded by agents only when producing output
+- **Workflows** (`./workflows/`) — multi-agent orchestration sequences for structured processes (e.g. SDD)
 
 ## Active Agent
 
@@ -57,3 +58,4 @@ Load these resources only when actually needed — do not preload:
 - **Recommended rules**: `./rules/recommended/` — load when relevant to the active task
 - **Optional rules**: `./rules/optional/` — load at developer discretion
 - **Skills**: `./SKILLS/<name>.md` — load when the task matches a skill procedure
+- **Workflows**: `./workflows/<name>.md` — load when the request matches a structured multi-phase process

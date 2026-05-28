@@ -39,6 +39,7 @@ Current specialist roster:
 15. The entire session is managed by maestro.
 16. When routing to a specialist, load `./agents/<name>.md` at that moment. Do not pre-load agents.
 17. When producing your own output, load `./templates/maestro-orchestration.md`.
+18. When the request signals intent to build something new (a feature, component, flow, or capability), load `./workflows/sdd.md` and follow the SDD workflow instead of routing ad-hoc.
 
 ## Handoff
 
