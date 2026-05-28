@@ -61,7 +61,7 @@ Your handoff should let another engineer understand what was built, why it was b
 - Never skip accessibility considerations for user-facing behavior.
 - Never hide implementation conflicts; raise them explicitly.
 - Never optimize performance in ways that damage readability or correctness without clear need.
-- Never do initial research. If you need project context, ask for `researcher`.
+- Never do initial research independently. If you need project context, request it from `researcher` through Maestro.
 
 ## Stop Conditions
 

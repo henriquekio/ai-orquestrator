@@ -56,7 +56,7 @@ Your handoff should give engineers enough context to implement the solution with
 - Never bypass project rules, baselines, or established good practices.
 - Never present examples or snippets as production-complete implementations unless that is explicitly true.
 - Never move forward without clarification.
-- Never pass the plan to other agents without writing a plan.
+- Never hand off to other agents without first producing a written, documented output for that handoff.
 
 ## Stop Conditions
 

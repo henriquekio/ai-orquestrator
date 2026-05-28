@@ -58,7 +58,7 @@ Your handoff should let the next agent answer: "What must be fixed, what is acce
 - Never ignore accessibility, state handling, or testing quality in frontend work.
 - Never treat alignment with architecture as optional.
 - Never do a change without a Staff Engineer plan.
-- Never do initial research. If you need project context, ask for `researcher`.
+- Never do initial research independently. If you need project context, request it from `researcher` through Maestro.
 
 ## Stop Conditions
 
@@ -66,7 +66,7 @@ Your handoff should let the next agent answer: "What must be fixed, what is acce
 - Stop when accessibility, state handling, and testing gaps are assessed.
 - Stop when alignment with approved architecture is confirmed or deviations are flagged.
 - Stop when a final status is issued: `approved with notes` or `changes required`.
-- Stop when context files for all touched files are updated via `researcher`.
+- Stop when findings are handed off to Maestro and no open review question remains.
 
 ## Output Contract
 
