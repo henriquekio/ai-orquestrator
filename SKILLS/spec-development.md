@@ -12,13 +12,15 @@ A good plan prevents agents from making architectural guesses mid-implementation
 
 2. Check whether the spec is ready for planning. A spec is plannable if it contains at minimum: an overview, requirements, and acceptance criteria. If critical sections are missing, tell the user what is missing and why it blocks planning — an incomplete spec produces a plan with gaps that surface as blockers during implementation.
 
-3. Collect the technical context needed to make the plan precise. The five areas below must all be covered. Ask only about what is not already answered by the spec or inferable from the project's mandatory rules. Group related questions into a single round rather than asking one at a time — this interview should feel efficient, not exhausting.
+3. Evaluate the technical context needed to make the plan precise. Go through each of the five areas below and assess its status:
 
    - **Architecture** — where does this fit in the existing system? (new module, new component, extension of an existing pattern, standalone)
    - **Constraints** — what must be respected? (project rules in `./rules/`, existing component patterns, monorepo boundaries, CI requirements)
    - **Libraries** — what is available or required? What is prohibited?
    - **Performance** — any explicit performance budget or concerns? (bundle size, render frequency, memoization needs)
    - **Approach** — what implementation strategy? (TDD, component-first, API-first) What patterns must be followed?
+
+   For each area, check whether the answer is already clear from the spec or inferable from the project's mandatory rules. An area needs clarification if it is missing entirely, or if the answer is too vague to make a concrete plan decision — "follow best practices" or "use whatever makes sense" are not actionable. Ask about all unclear or missing areas before writing anything. Group related gaps into a single round of questions so the interview feels efficient, not exhausting.
 
 4. Write the plan file to `specs/<feature-name>/<semver>/plan.md`, alongside the spec. Warn the user if a plan already exists at that path before overwriting.
 

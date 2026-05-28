@@ -8,12 +8,13 @@ A good spec prevents the most expensive kind of rework: building the right thing
 
 ## Procedure
 
-1. Read the context the user provided. A spec can only be as precise as the context behind it. Evaluate whether the following four areas are covered well enough to produce testable requirements:
+1. Read the context the user provided. A spec can only be as precise as the context behind it. Evaluate whether the following five areas are covered well enough to produce testable requirements:
 
    - **Who** will use this? (user type, role, situation)
    - **What problem** does it solve for them? (pain point, friction, unmet need)
    - **How** will they interact with it? (entry points, key actions, edge cases, unhappy paths)
    - **What outcomes matter?** (measurable goals, success signals, explicit non-goals)
+   - **What is explicitly out of scope?** (capabilities that will not be built in this version, adjacent behaviors that must be excluded to keep the scope bounded)
 
 2. If any area is missing or too vague, interview the user before writing anything. When you ask, briefly explain what you are trying to nail down and why it matters for the spec — users give better answers when they understand the intent behind the question. Ask one focused gap at a time, or group closely related gaps if they naturally belong together.
 
@@ -32,6 +33,8 @@ A good spec prevents the most expensive kind of rework: building the right thing
    **Overview** — two to four sentences: who this is for, what problem it solves, and what success looks like. If someone reads only this section, they should understand the feature and its value.
 
    **Requirements** — a flat, numbered list. Every requirement must be specific and verifiable. "The button must show a spinner while `isLoading` is true" is a requirement. "The button should be fast" is not.
+
+   **Out of Scope** — a flat list of capabilities, behaviors, or variations that will not be built in this version. Out-of-scope items prevent scope creep during implementation and remove ambiguity about what "done" means. If the user did not provide these, ask before writing the spec — do not infer them.
 
    **User Stories** — one story per distinct user goal or action:
    > `As a <user>, I want to <action> so that <outcome>.`
