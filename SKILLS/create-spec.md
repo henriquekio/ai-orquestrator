@@ -2,37 +2,54 @@
 
 ## Purpose
 
-This skill is used to produce a structured specification file following the Spec Driven Development (SDD) pattern. Use it before any implementation begins, whenever a new feature, flow, or product change needs to be clearly defined. The output is a versioned spec file that gives the entire team — product, design, and engineering — a shared and unambiguous definition of what is being built and why.
+Use this skill whenever a new feature, flow, or product change needs to be clearly defined before any implementation begins. It follows the Spec Driven Development (SDD) pattern: collect enough context to understand the problem, then produce a versioned spec file that gives the entire team — product, design, and engineering — a shared and unambiguous definition of what is being built and why.
+
+A good spec prevents the most expensive kind of rework: building the right thing the wrong way, or the wrong thing entirely.
 
 ## Procedure
 
-1. Read the context provided by the user. Evaluate whether it answers all four essential questions:
-   - **Who** will use this? (user type, role, context)
-   - **What problem** does it solve for them? (pain point, current friction, unmet need)
-   - **How** will they interact with it? (entry points, flow, key actions, edge cases)
-   - **What outcomes matter?** (success criteria, measurable goals, non-goals)
+1. Read the context the user provided. A spec can only be as precise as the context behind it. Evaluate whether the following four areas are covered well enough to produce testable requirements:
 
-2. If any of the four questions is unanswered or too vague to produce a precise spec, interview the user before writing anything. Ask only what is missing — do not ask questions that were already answered. Ask one focused question at a time if multiple things are missing, or group closely related gaps into one round of questions.
+   - **Who** will use this? (user type, role, situation)
+   - **What problem** does it solve for them? (pain point, friction, unmet need)
+   - **How** will they interact with it? (entry points, key actions, edge cases, unhappy paths)
+   - **What outcomes matter?** (measurable goals, success signals, explicit non-goals)
 
-3. Once all four areas are sufficiently covered, confirm the feature name and the target semver version with the user before writing the file. The feature name should be short, lowercase, hyphenated (e.g. `user-onboarding`, `payment-retry`). The version should follow semver (e.g. `1.0.0`).
+2. If any area is missing or too vague, interview the user before writing anything. When you ask, briefly explain what you are trying to nail down and why it matters for the spec — users give better answers when they understand the intent behind the question. Ask one focused gap at a time, or group closely related gaps if they naturally belong together.
+
+   Good context looks like: "Developers who just merged a PR want to see which review comments were addressed." Insufficient context looks like: "Users want to track changes." Push for the former.
+
+3. Once the four areas are covered, propose a feature name and version before writing the file:
+   - Feature name: short, lowercase, hyphenated (e.g. `payment-retry`, `user-onboarding`)
+   - Version: semantic versioning (e.g. `1.0.0` for a new spec, `1.1.0` for a scope change)
+
+   Confirm both with the user. If a spec already exists at the resulting path (`specs/<feature-name>/<semver>/spec.md`), warn the user before overwriting.
 
 4. Write the spec file to `specs/<feature-name>/<semver>/spec.md` in the repository root.
 
-5. The spec file must contain all of the following sections in order:
+5. The spec must contain all of the following sections in order:
 
-   - **Overview** — a concise description of the feature and its purpose. Who it is for, what problem it solves, and what success looks like.
-   - **Requirements** — a flat list of functional and non-functional requirements. Each requirement should be specific, testable, and unambiguous.
-   - **User Stories** — one story per distinct user action or goal, using the format: `As a <user>, I want to <action> so that <outcome>.`
-   - **Acceptance Criteria** — one or more criteria per user story, using the format: `GIVEN <context> WHEN <action> THEN <expected result>.`
-   - **Flow** — one or more Mermaid diagrams illustrating the main user journey and any branching paths. Use `flowchart TD` for primary flows. Add a sequence diagram (`sequenceDiagram`) when system interactions (API calls, async steps, backend coordination) are part of the feature.
+   **Overview** — two to four sentences: who this is for, what problem it solves, and what success looks like. If someone reads only this section, they should understand the feature and its value.
+
+   **Requirements** — a flat, numbered list. Every requirement must be specific and verifiable. "The button must show a spinner while `isLoading` is true" is a requirement. "The button should be fast" is not.
+
+   **User Stories** — one story per distinct user goal or action:
+   > `As a <user>, I want to <action> so that <outcome>.`
+
+   **Acceptance Criteria** — one or more per user story, each expressing a verifiable behavior:
+   > `GIVEN <context> WHEN <action> THEN <expected result>.`
+   Criteria should be specific enough that a developer and a tester would independently reach the same conclusion about whether they pass.
+
+   **Flow** — one or more Mermaid diagrams. Use `flowchart TD` for the primary user journey, including branching and error paths. Add a `sequenceDiagram` when the feature involves async steps, API calls, or multi-system coordination.
 
 ## Guard rails
 
-- Do not begin writing the spec until all four essential questions are answered with enough precision to make each requirement testable.
-- Do not invent user goals, system behaviors, or business rules that were not provided or confirmed by the user.
-- Do not produce vague requirements like "the system should be fast" — every requirement must be concrete and verifiable.
-- Do not skip the Mermaid flow — a spec without a visual representation of the user journey is incomplete.
-- Do not write implementation details (technology choices, component names, API design) unless the user explicitly provides them as constraints.
-- Do not conflate user stories with acceptance criteria — stories express intent and value, criteria express verifiable behavior.
-- Do not proceed to writing if the feature name or semver version is not confirmed by the user.
-- Do not overwrite an existing spec at the same path without warning the user and confirming they want to replace it.
+Write only what the user has confirmed. Invented goals, behaviors, or business rules corrupt the spec and will mislead every agent and engineer who reads it downstream.
+
+Keep requirements concrete. Vague requirements ("performant", "user-friendly", "scalable") cannot be tested and will produce disagreements at review time. If a requirement cannot be verified, it is not ready to be written.
+
+User stories and acceptance criteria serve different purposes — do not conflate them. Stories capture intent and user value. Criteria capture observable, verifiable behavior. A story without criteria is a wish; criteria without a story are a checklist with no context.
+
+Do not write implementation details (specific component names, technology choices, API design) unless the user explicitly provides them as constraints. Implementation is the engineer's domain; the spec defines the what and why, not the how.
+
+Skip the Mermaid flow only if the feature has no branching paths and a single obvious outcome — and that is genuinely rare. A spec without a flow forces each reader to reconstruct the journey in their head, which leads to different interpretations.
