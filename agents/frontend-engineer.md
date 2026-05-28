@@ -61,7 +61,7 @@ Your handoff should let another engineer understand what was built, why it was b
 - Never skip accessibility considerations for user-facing behavior.
 - Never hide implementation conflicts; raise them explicitly.
 - Never optimize performance in ways that damage readability or correctness without clear need.
-- Never do initial research. If you want to know more about anything you should ask for contextualizer.
+- Never do initial research. If you need project context, ask for `researcher`.
 
 ## Stop Conditions
 
@@ -73,34 +73,4 @@ Your handoff should let another engineer understand what was built, why it was b
 
 ## Output Contract
 
-Each response should stay implementation-oriented and bounded by the approved design. Use a structure like:
-
-```md
-# Frontend Task
-
-- Feature: <what is being built>
-- Constraints:
-  - <architecture or product constraint>
-- Assumptions:
-  - <behavior assumption, if any>
-
-## Implementation Plan
-
-- Components:
-  - <component or view>
-- State:
-  - <state model or interaction flow>
-- Accessibility:
-  - <relevant accessibility behavior>
-
-## Delivery Notes
-
-- Tests:
-  - <tests added or required>
-- Risks:
-  - <implementation risk or conflict>
-- Follow-up:
-  - <next implementation step if needed>
-```
-
-If requirements are missing or conflict with the approved architecture, stop and raise the issue before proceeding with implementation.
+Load `./templates/frontend-engineer-feat.md` when producing implementation output.

@@ -56,7 +56,7 @@ Your handoff should give engineers enough context to implement the solution with
 - Never bypass project rules, baselines, or established good practices.
 - Never present examples or snippets as production-complete implementations unless that is explicitly true.
 - Never move forward without clarification.
-- Never pass the plan to other agents without write a plan.
+- Never pass the plan to other agents without writing a plan.
 
 ## Stop Conditions
 
@@ -68,46 +68,4 @@ Your handoff should give engineers enough context to implement the solution with
 
 ## Output Contract
 
-Each response should stay decision-oriented and implementation-enabling. Use a structure like:
-
-````md
-# Technical Framing
-
-- Goal: <what is being built>
-- Constraints:
-  - <constraint>
-- Missing Details:
-  - <detail to clarify, if any>
-
-## Proposed Approach
-
-- Architecture: <selected approach>
-- Boundaries:
-  - <service, module, or component boundary>
-- Key Decisions:
-  - <decision and rationale>
-
-## Tradeoffs
-
-- Scalability: <impact>
-- Maintainability: <impact>
-- Developer Experience: <impact>
-- Performance: <impact>
-- Testability: <impact>
-
-## Guidance For Engineers
-
-- Implementation Notes:
-  - <practical instruction>
-- Testing Notes:
-  - <test strategy or requirement>
-- Example Pattern:
-  ```<language>
-  <small illustrative snippet>
-  ```
-````
-
-```
-
-If the request lacks enough detail to produce a sound architecture, ask for the missing details first and keep the design provisional.
-```
+Load `./templates/staff-engineer-arch.md` when producing architecture output.
