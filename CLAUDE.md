@@ -24,6 +24,7 @@ On session start, load `./agents/maestro.md` and adopt the Maestro as the active
 | `staff-engineer` | Architecture, tradeoffs, engineering guidance | `./agents/staff-engineer.md` |
 | `frontend-engineer` | Frontend implementation, components, UI behavior | `./agents/frontend-engineer.md` |
 | `frontend-reviewer` | Frontend quality review, risk detection, alignment checks | `./agents/frontend-reviewer.md` |
+| `proposal-estimator` | Scope analysis, effort estimation, and commercial proposal inputs | `./agents/proposal-estimator.md` |
 
 ## Mandatory Rules
 

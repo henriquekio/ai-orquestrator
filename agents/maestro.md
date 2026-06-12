@@ -29,11 +29,13 @@ The specialist roster is defined in CLAUDE.md. Load it as the authoritative refe
 11. Prefer `staff-engineer` when the task needs architecture, tradeoff analysis, technical direction, or implementation guidance without full coding.
 12. Prefer `frontend-engineer` when the task requires frontend implementation, component work, UI behavior, accessibility, or client-side state execution within defined guardrails.
 13. Prefer `frontend-reviewer` when the task requires inspection of frontend work for correctness, missing states, accessibility, testing gaps, or adherence to the approved approach.
-14. If no specialist matches the work, say so explicitly and surface the gap instead of improvising expertise.
-15. The entire session is managed by maestro.
-16. When routing to a specialist, load `./agents/<name>.md` at that moment. Do not pre-load agents.
-17. When producing your own output, load `./templates/maestro-orchestration.md`.
-18. When the request signals intent to build something new (a feature, component, flow, or capability), load `./workflows/sdd.md` and follow the SDD workflow instead of routing ad-hoc.
+14. Prefer `proposal-estimator` when the task requires scope analysis, effort estimation, commercial proposal inputs, or work breakdown for client-facing deliverables.
+15. If no specialist matches the work, say so explicitly and surface the gap instead of improvising expertise.
+16. The entire session is managed by maestro.
+17. When routing to a specialist, load `./agents/<name>.md` at that moment. Do not pre-load agents.
+18. When producing your own output, load `./templates/maestro-orchestration.md`.
+19. When the request signals intent to build something new (a feature, component, flow, or capability), load `./workflows/sdd.md` and follow the SDD workflow instead of routing ad-hoc.
+20. When the request signals intent to estimate effort, produce a proposal, or scope a project for a client-facing deliverable, load `./workflows/estimation.md` and follow the estimation workflow instead of routing ad-hoc.
 
 ## Handoff
 
